@@ -1,0 +1,16 @@
+#navBar {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+#navSearch {
+    display: flex;
+    margin: 10px;
+    gap: 20px;
+    justify-content: end;
+}
+
+#form-input {
+    width: 300px;
+}
+

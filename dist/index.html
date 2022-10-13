@@ -6,10 +6,46 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.css">
+
     <link rel="stylesheet" href="style.css">
     <script src="main.js" defer></script>
 </head>
 <body>
+    <div class="container-fluid bg-dark">
+        <p class="text-light"> Header</p>
+    </div>
     
+    
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark" id="navBar">
+        <ul class="nav">
+            <li class="nav-item">
+              <a class="nav-link" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Directory</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Discussion</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link disabled" href="#">Login</a>
+            </li>
+          </ul>
+        
+
+        <form id="navSearch" action="/action_page.php">
+          <input class="form-control mr-sm-2" id="form-input" type="text" placeholder="Search">
+          <button class="btn btn-success" type="submit">Search</button>
+        </form>
+
+      </nav>
+
+    <div id="content" class="container-fluid bg-primary"> main content
+
+    </div>
+
+    <footer class="container-fluid bg-dark">
+        <p class="text-light">Footer</p>
+    </footer>
 </body>
 </html>
