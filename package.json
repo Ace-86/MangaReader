@@ -33,6 +33,7 @@
     "axios": "^1.1.2",
     "bootstrap": "^5.2.2",
     "cheerio": "^1.0.0-rc.12",
-    "jquery": "^3.6.1"
+    "jquery": "^3.6.1",
+    "puppeteer": "^19.0.0"
   }
 }
