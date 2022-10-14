@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="h-100">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,42 +10,236 @@
     <link rel="stylesheet" href="style.css">
     <script src="main.js" defer></script>
 </head>
-<body>
-    <div class="container-fluid bg-dark">
-        <p class="text-light"> Header</p>
-    </div>
+<body class="d-flex flex-column h-100">
     
-    
-    <nav class="navbar navbar-expand-sm bg-dark navbar-dark" id="navBar">
-        <ul class="nav">
+  <header>
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">Manga Reader</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+          <ul class="navbar-nav me-auto mb-2 mb-md-0">
             <li class="nav-item">
-              <a class="nav-link" href="#">Home</a>
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#">Directory</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Discussion</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link disabled" href="#">Login</a>
+              <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Login</a>
             </li>
           </ul>
-        
+          <form class="d-flex">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success" type="submit">Search</button>
+          </form>
+        </div>
+      </div>
+    </nav>
+  </header>
+  
+  <!-- main content -->
 
-        <form id="navSearch" action="/action_page.php">
-          <input class="form-control mr-sm-2" id="form-input" type="text" placeholder="Search">
-          <button class="btn btn-success" type="submit">Search</button>
-        </form>
 
-      </nav>
-
-    <div id="content" class="container-fluid bg-primary"> main content
-
+  <!-- jumbo banner feature of the day -->
+  <main class="container">
+    <div class="p-4 p-md-5 mb-4 text-white rounded bg-dark">
+      <div class="col-md-6 px-0">
+        <h1 class="display-4 fst-italic">Featured Manga Title by Admin</h1>
+        <p class="lead my-3">Carousel; give information summarizing the story and having a link connecting to the story</p>
+        <p class="lead mb-0"><a href="#" class="text-white fw-bold">Continue reading...</a></p>
+      </div>
     </div>
+    
+  
+    <!-- ROW 2: featured post -->
+    <div class="row mb-2">
+      <!-- left featured post -->
+      <div class="col-md-6">
+        <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+          <div class="col p-4 d-flex flex-column position-static">
+            <strong class="d-inline-block mb-2 text-primary">Manga of the Week</strong>
+            <h3 class="mb-0">Featured Title post</h3>
+            <div class="mb-1 text-muted">current date</div>
+            <p class="card-text mb-auto">left feature content</p>
+            <a href="#" class="stretched-link">Continue reading</a>
+          </div>
+          <div class="col-auto d-none d-lg-block">
+            <svg class="bd-placeholder-img" width="200" height="250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
+          </div>
+        </div>
+      </div>
+      <!-- right featured post -->
+      <div class="col-md-6">
+        <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+          <div class="col p-4 d-flex flex-column position-static">
+            <strong class="d-inline-block mb-2 text-success">Webtoon of the Week</strong>
+            <h3 class="mb-0">Featured Title post</h3>
+            <div class="mb-1 text-muted">Nov 11</div>
+            <p class="mb-auto">right feature content</p>
+            <a href="#" class="stretched-link">Continue reading</a>
+          </div>
+          <div class="col-auto d-none d-lg-block">
+            <svg class="bd-placeholder-img" width="200" height="250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <!-- ROW 3; latest updates -->
+    <div class="row g-5"> 
+      <!-- right column; latest chapter cards -->
+      <div class="col-md-8 bg-info text-light">
+        <h1> Latest Chapters</h1>
 
-    <footer class="container-fluid bg-dark">
-        <p class="text-light">Footer</p>
-    </footer>
-</body>
+        <!-- cards of latest books updated -->
+        <div class="row">
+          
+          <div class="col bg-info">
+            <div id="card" class="bg-dark border rounded m-2">
+              <image > image</image>
+              <h1>  <a class="btn btn-outline-primary" href="#">Title</a></h1>
+              <p> Chapter </p>
+              <p> date updated </p>
+            </div>
+            <div  id="card" class="bg-dark border rounded m-2">
+              <image > image</image>
+              <h1>  <a class="btn btn-outline-primary" href="#">Title</a></h1>
+              <p> Chapter </p>
+              <p> date updated </p>
+            </div>
+            <div id="card" class="bg-dark border rounded m-2">
+              <image > image</image>
+              <h1>  <a class="btn btn-outline-primary" href="#">Title</a></h1>
+              <p> Chapter </p>
+              <p> date updated </p>
+            </div>
+            <div  id="card" class="bg-dark border rounded m-2">
+              <image > image</image>
+              <h1>  <a class="btn btn-outline-primary" href="#">Title</a></h1>
+              <p> Chapter </p>
+              <p> date updated </p>
+            </div>
+            <div id="card" class="bg-dark border rounded m-2">
+              <image > image</image>
+              <h1>  <a class="btn btn-outline-primary" href="#">Title</a></h1>
+              <p> Chapter </p>
+              <p> date updated </p>
+            </div>
+            <div  id="card" class="bg-dark border rounded m-2">
+              <image > image</image>
+              <h1>  <a class="btn btn-outline-primary" href="#">Title</a></h1>
+              <p> Chapter </p>
+              <p> date updated </p>
+            </div>
+            <div id="card" class="bg-dark border rounded m-2">
+              <image > image</image>
+              <h1>  <a class="btn btn-outline-primary" href="#">Title</a></h1>
+              <p> Chapter </p>
+              <p> date updated </p>
+            </div>
+            <div  id="card" class="bg-dark border rounded m-2">
+              <image > image</image>
+              <h1>  <a class="btn btn-outline-primary" href="#">Title</a></h1>
+              <p> Chapter </p>
+              <p> date updated </p>
+            </div>
+          </div>
+          
+          <div class="col bg-info">
+            <div id="card" class="bg-dark border rounded m-2">
+              <image > image</image>
+              <h1>  <a class="btn btn-outline-primary" href="#">Title</a></h1>
+              <p> Chapter </p>
+              <p> date updated </p>
+            </div>
+            <div  id="card" class="bg-dark border rounded m-2">
+              <image > image</image>
+              <h1>  <a class="btn btn-outline-primary" href="#">Title</a></h1>
+              <p> Chapter </p>
+              <p> date updated </p>
+            </div>
+            <div id="card" class="bg-dark border rounded m-2">
+              <image > image</image>
+              <h1>  <a class="btn btn-outline-primary" href="#">Title</a></h1>
+              <p> Chapter </p>
+              <p> date updated </p>
+            </div>
+            <div  id="card" class="bg-dark border rounded m-2">
+              <image > image</image>
+              <h1>  <a class="btn btn-outline-primary" href="#">Title</a></h1>
+              <p> Chapter </p>
+              <p> date updated </p>
+            </div>
+            <div id="card" class="bg-dark border rounded m-2">
+              <image > image</image>
+              <h1>  <a class="btn btn-outline-primary" href="#">Title</a></h1>
+              <p> Chapter </p>
+              <p> date updated </p>
+            </div>
+            <div  id="card" class="bg-dark border rounded m-2">
+              <image > image</image>
+              <h1>  <a class="btn btn-outline-primary" href="#">Title</a></h1>
+              <p> Chapter </p>
+              <p> date updated </p>
+            </div>
+            <div id="card" class="bg-dark border rounded m-2">
+              <image > image</image>
+              <h1>  <a class="btn btn-outline-primary" href="#">Title</a></h1>
+              <p> Chapter </p>
+              <p> date updated </p>
+            </div>
+            <div  id="card" class="bg-dark border rounded m-2">
+              <image > image</image>
+              <h1>  <a class="btn btn-outline-primary" href="#">Title</a></h1>
+              <p> Chapter </p>
+              <p> date updated </p>
+            </div>
+          </div>  
+        </div>
+  
+        <nav class="blog-paginatio d-flex justify-content-center" aria-label="Pagination">
+          <a class="btn btn-outline-primary" href="#">More</a>
+        </nav>
+  
+      </div>
+  
+
+
+      <!-- ---------------next column--------- -->
+      <div class="col-md-4">
+        <div class="position-sticky" style="top: 2rem;">
+
+          <div class="p-4 mb-3 bg-light rounded">
+            <h4 class="fst-italic">login form</h4>
+            <p class="mb-0"> turn this into a login/sign up form</p>
+          </div>
+
+          <div class="p-4 mb-3 bg-light rounded">
+            <h4 class="fst-italic">History</h4>
+            <p class="mb-0"> turn this into user history list showing last 10 mangas read</p>
+          </div>
+
+          <div class="p-4 mb-3 bg-light rounded">
+            <h4 class="fst-italic">History</h4>
+            <p class="mb-0"> turn this into user history list showing last 10 mangas read</p>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </main>
+  
+  <footer class="footer mt-auto py-3 bg-light">
+    <div class="container">
+      <span class="text-muted">Footer information goes here</span>
+    </div>
+  </footer>
+  
+        
+    
+  
+  </body>
 </html>
