@@ -20,8 +20,9 @@ const puppeteer = require("puppeteer");
 });
 console.log("Page has been evaluated!");
 
-fs.writeFileSync("./data.json", JSON.stringify(issueSrcs));
+const dataCollect = fs.writeFileSync("./data.json", JSON.stringify(issueSrcs));
 console.log("File is created!");
+console.log(dataCollect)
 
 // End Puppeteer
 await browser.close();
