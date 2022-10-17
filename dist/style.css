@@ -3,3 +3,8 @@
     height: 800px;
     gap: 0px;
 }
+
+#thumbnail {
+    width: 100px;
+    height: 250px;
+}
