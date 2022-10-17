@@ -7,7 +7,7 @@ const puppeteer = require("puppeteer");
     const page = await browser.newPage();
    // Specify comic issue page url
 await page.goto(
-  "https://mangasee123.com/read-online/Weak-Hero-chapter-207.html"
+  "https://mangasee123.com/read-online/Weak-Hero-chapter-202.html"
   );
   console.log("page has been loaded!");
   const issueSrcs = await page.evaluate(() => {
