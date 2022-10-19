@@ -20,3 +20,7 @@
     height: auto;
     gap: 0px;
 }
+
+#chapterBlock {
+    border: 1px solid blue;
+}
