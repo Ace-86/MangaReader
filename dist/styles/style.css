@@ -1,0 +1,26 @@
+
+
+#thumbnail {
+    width: 100px;
+    height: 250px;
+}
+
+#manga_viewer {
+    background-color: black;
+}
+
+#viewer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#manga_image {
+    width: 600px;
+    height: auto;
+    gap: 0px;
+}
+
+#chapterBlock {
+    border: 1px solid blue;
+}
