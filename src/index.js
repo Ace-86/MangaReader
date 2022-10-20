@@ -16,7 +16,7 @@ const datesIndex = require('./dataScrape/dateList.json')
         newImage.src = data[i];
         parentNode.appendChild(newImage);
     }
-} else if ($("body").data("title") === "page_directory") {
+} else if ($("body").data("title") === "page_manga_index") {
 //populates chapters + dates  on page
 const indexList = document.querySelector('#index_list')
 
