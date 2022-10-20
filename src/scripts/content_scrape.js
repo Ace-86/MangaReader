@@ -1,6 +1,7 @@
 const fs = require("fs");
 const puppeteer = require("puppeteer");
 
+//scrape chapter list from site
 (async () => {
   try {
     const browser = await puppeteer.launch();
@@ -30,6 +31,7 @@ await page.goto(
   }
 })();
 
+//scrape chapter release dates from site
 (async () => {
   try {
     const browser = await puppeteer.launch();
