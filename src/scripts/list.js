@@ -15,4 +15,3 @@ for (let i = 0; i < chapterIndex.length; i++) {
     chapterBlock.innerText = chapterIndex[i];
     indexList.appendChild(chapterBlock);
 }
-console.log('hello')
