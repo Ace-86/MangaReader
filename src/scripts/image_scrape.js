@@ -1,6 +1,8 @@
 const fs = require("fs");
 const puppeteer = require("puppeteer");
 
+
+// scrape image from site
 (async () => {
   try {
     const browser = await puppeteer.launch();
