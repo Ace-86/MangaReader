@@ -1,3 +1,5 @@
+import defaultExport, { Eleceed } from "./scripts/objects.js";
+
 const data = require('./dataScrape/images.json');
 // console.log(data)
 const chapterIndex = require('./dataScrape/chapterList.json');
@@ -5,8 +7,11 @@ const chapterIndex = require('./dataScrape/chapterList.json');
 const datesIndex = require('./dataScrape/dateList.json')
 // console.log(datesIndex);
 
- if ($("body").data("title") === "page_homepage") {
-    console.log('homepage is working')
+
+
+if ($("body").data("title") === "page_homepage") {
+    console.log('homepage is working');
+
  } else if ($("body").data("title") === "manga_viewer") {
     const parentNode = document.querySelector('#viewer');
     for (let i = 0; i < data.length; i++) {
