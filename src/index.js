@@ -30,7 +30,6 @@ for (let i = 0; i < chapterIndex.length; i++) {
     indexList.appendChild(chapterLinks);
     chapterLinks.appendChild(chapterBlock)
 }
-
 //get chapter numbers only to use for pulling up images in viewer
 let chapters = [];
 for (let i = 0; i < chapterIndex.length; i++) {
