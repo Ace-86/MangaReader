@@ -1,6 +1,9 @@
+// import * as myModule from "./objects.js";
+
 const fs = require("fs");
 const puppeteer = require("puppeteer");
-
+const objects = require("./objects.js");
+console.log(objects);
 //scrape chapter list from site
 (async () => {
   try {
@@ -8,7 +11,7 @@ const puppeteer = require("puppeteer");
     const page = await browser.newPage();
    // Specify comic issue page url
 await page.goto(
-  "https://mangasee123.com/manga/Weak-Hero"
+  "https://mangasee123.com/manga/Eleceed"
   );
   console.log("page has been loaded!");
   await page.click('div.list-group-item')
@@ -38,7 +41,7 @@ await page.goto(
     const page = await browser.newPage();
    // Specify comic issue page url
 await page.goto(
-  "https://mangasee123.com/manga/Weak-Hero"
+  "https://mangasee123.com/manga/Eleceed"
   );
   console.log("page has been loaded!");
   await page.click('div.list-group-item')
