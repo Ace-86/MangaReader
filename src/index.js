@@ -1,4 +1,4 @@
-import defaultExport, { Eleceed } from "./scripts/objects.js";
+import defaultExport, {call} from "./scripts/list"
 
 const data = require('./dataScrape/images.json');
 // console.log(data)
@@ -11,7 +11,6 @@ const datesIndex = require('./dataScrape/dateList.json')
 
 if ($("body").data("title") === "page_homepage") {
     console.log('homepage is working');
-
  } else if ($("body").data("title") === "manga_viewer") {
     const parentNode = document.querySelector('#viewer');
     for (let i = 0; i < data.length; i++) {
@@ -21,6 +20,10 @@ if ($("body").data("title") === "page_homepage") {
         newImage.src = data[i];
         parentNode.appendChild(newImage);
     }
+    } else if ($("body").data("title") === "page_directory") {
+      console.log("directory")
+      call();
+        
 } else if ($("body").data("title") === "page_manga_index") {
 //populates chapters + dates  on page
 const indexList = document.querySelector('#index_list')
