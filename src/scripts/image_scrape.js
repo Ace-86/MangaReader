@@ -1,15 +1,15 @@
 const fs = require("fs");
 const puppeteer = require("puppeteer");
+const objects = require("./objects.js");
 
-
-// scrape image from site
+// scrape images from site
 (async () => {
   try {
     const browser = await puppeteer.launch();
     const page = await browser.newPage();
    // Specify comic issue page url
 await page.goto(
-  "https://mangasee123.com/read-online/Weak-Hero-chapter-202.html"
+  "https://mangasee123.com/read-online/" + `${objects.WoodenStick.key}` +"-chapter-002.html"
   );
   console.log("page has been loaded!");
   const issueSrcs = await page.evaluate(() => {
@@ -29,3 +29,4 @@ await page.goto(
   }
 })();
 
+//wrap in a function so this can be called whenever user selects a manga
