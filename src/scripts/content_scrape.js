@@ -1,8 +1,8 @@
 // import * as myModule from "./objects.js";
 
+const objects = require("./objects.js");
 const fs = require("fs");
 const puppeteer = require("puppeteer");
-const objects = require("./objects.js");
 console.log(objects);
 //scrape chapter list from site
 (async () => {
@@ -11,7 +11,7 @@ console.log(objects);
     const page = await browser.newPage();
    // Specify comic issue page url
 await page.goto(
-  "https://mangasee123.com/manga/Eleceed"
+  "https://mangasee123.com/manga/" + `${objects.WoodenStick.key}` + " "
   );
   console.log("page has been loaded!");
   await page.click('div.list-group-item')
@@ -41,7 +41,7 @@ await page.goto(
     const page = await browser.newPage();
    // Specify comic issue page url
 await page.goto(
-  "https://mangasee123.com/manga/Eleceed"
+  "https://mangasee123.com/manga/" + `${objects.WoodenStick.key}` +""
   );
   console.log("page has been loaded!");
   await page.click('div.list-group-item')
@@ -61,3 +61,5 @@ await page.goto(
     console.log('you have an error')
   }
 })();
+
+//wrap in a function so this can be called whenever user selects a manga
