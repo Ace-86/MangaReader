@@ -29,11 +29,5 @@ const Eleceed = {
 }
 
 const Arr = ['one', 'two', 'three']
-// export {Eleceed, WoodenStick, WeakHero}
 
-
-
-// key list
-// 99-Reinforced-Wooden-Stick
-// Eleceed
-// Weak-Hero
+module.exports = {Eleceed, WoodenStick}
