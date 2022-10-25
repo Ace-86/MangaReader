@@ -48,13 +48,3 @@ console.log(chapters);
 } else {
     console.log('error')
 }
-/* <a href="/read-online/Weak-Hero-chapter-208.html" class="list-group-item ChapterLink ng-scope" ng-repeat="Chapter in vm.Chapters | limitTo:vm.LimitChapter">
-								<span style="font-weight:600" class="ng-binding">
-									Chapter
-									208
-								</span>
-								<i style="color:gray;" class="ng-binding"></i>
-								<span class="float-right d-none d-md-inline ng-binding" style="color:gray;">10/12/2022</span>
-
-								<div class="d-block d-md-none ng-binding" style="color:gray; font-size:12px;">10/12/2022</div>
-							</a> */
