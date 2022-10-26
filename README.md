@@ -11,3 +11,4 @@ page loads the chapter selected;
 in viewer, create options to go to next chapter, previous chapter, a drop down of all chapters minified to selects from;
 
 
+update: sick, going to push back updates for a few days
