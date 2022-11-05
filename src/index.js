@@ -1,22 +1,26 @@
 import defaultExport, {call} from "./scripts/list"
+import defaultExport, { WoodenStick } from "./scripts/objects"
 
 const data = require('./dataScrape/images.json');
 // console.log(data)
 const chapterIndex = require('./dataScrape/chapterList.json');
 // console.log(chapterIndex)
-const datesIndex = require('./dataScrape/dateList.json')
+const datesIndex = require('./dataScrape/dateList.json');
 // console.log(datesIndex);
-
-
+const object = require("./scripts/objects.js");
 //Home page
 if ($("body").data("title") === "page_homepage") {
     console.log('homepage is working');
-    let contentSelection = document.querySelectorAll('#select_button');
-    contentSelection.forEach(function() {
-        console.log('hey');
-    })
-//Viewer page;
-} else if ($("body").data("title") === "manga_viewer") {
+    const user_selection = document.querySelectorAll('.btn-outline-primary');
+    console.log(object);
+    user_selection.forEach(box => {
+        box.addEventListener('click', function(e) {
+            var user_select = e.target.dataset.key;
+            console.log(user_select);
+  })
+})
+}//Viewer pa
+ else if ($("body").data("title") === "manga_viewer") {
     const parentNode = document.querySelector('#viewer');
     for (let i = 0; i < data.length; i++) {
         const newImage = document.createElement('img'); 
