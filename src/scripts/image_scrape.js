@@ -1,7 +1,8 @@
 const fs = require("fs");
 const puppeteer = require("puppeteer");
 const objects = require("./objects.js");
-
+var selectedManga = objects.WoodenStick.key
+var chapter = 001;
 // scrape images from site
 (async () => {
   try {
@@ -9,7 +10,7 @@ const objects = require("./objects.js");
     const page = await browser.newPage();
    // Specify comic issue page url
 await page.goto(
-  "https://mangasee123.com/read-online/" + `${objects.WoodenStick.key}` +"-chapter-002.html"
+  "https://mangasee123.com/read-online/" + `${selectedManga}` +"-chapter-" + `${chapter}` + ".html"
   );
   console.log("page has been loaded!");
   const issueSrcs = await page.evaluate(() => {
