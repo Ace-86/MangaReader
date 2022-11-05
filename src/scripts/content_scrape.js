@@ -4,6 +4,8 @@ const objects = require("./objects.js");
 const fs = require("fs");
 const puppeteer = require("puppeteer");
 console.log(objects);
+var selectedManga = objects.WoodenStick.key
+
 //scrape chapter list from site
 (async () => {
   try {
@@ -11,7 +13,7 @@ console.log(objects);
     const page = await browser.newPage();
    // Specify comic issue page url
 await page.goto(
-  "https://mangasee123.com/manga/" + `${objects.WoodenStick.key}` + " "
+  "https://mangasee123.com/manga/" + `${selectedManga}` + " "
   );
   console.log("page has been loaded!");
   await page.click('div.list-group-item')
